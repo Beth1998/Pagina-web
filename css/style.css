@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background-image: url(/assets/img/fondo2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #000000b7;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start; 
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.navegacion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navegacion li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navegacion li a:hover {
+    color:aqua;
+}
+
+.main {
+    padding: 20px;
+}
+
+.Carrusel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.carousel-inner img {
+    width: 100%; /*ancho*/
+    height: auto;
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 0 30px;
+}
+
+.mision-vision .item {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.mision-vision .item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.mision-vision .item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mision-vision .item p {
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.servicios{
+    background-color: rgba(0, 0, 0, 0.705);
+}
+.servicios h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.servicios p {
+    text-align: center;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer article {
+    width: 30%;
+}
+
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+footer li a:hover {
+    color: #ff8c00;
+}
+
+.geolocalizacion iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.geolocalizacion div {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.geolocalizacion iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .geolocalizacion iframe {
+        height: 250px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;  /* Pone los elementos en una columna */
+        align-items: center;
+        padding: 0;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;  /* Centra el logo */
+    }
+
+    .logo img {
+        width: 80px;  /* Reduce el tamaño del logo */
+    }
+
+    .navegacion {
+        display: flex;
+        flex-direction: column;  /* Mueve los enlaces de navegación a una columna */
+        gap: 10px;
+        text-align: center;
+    }
+
+    .mision-vision {
+        flex-direction: column;  /* Hace que los items de Misión y Visión se apilen verticalmente */
+        align-items: center;
+    }
+
+    .mision-vision .item {
+        width: 80%;  /* Aumenta el tamaño de los elementos de Misión y Visión en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;  /* Pone los elementos del footer en una columna */
+        align-items: center;
+    }
+
+    footer article {
+        width: 80%;  /* Aumenta el tamaño de los artículos en el footer */
+        margin-bottom: 20px;
+    }
+
+    footer li a {
+        font-size: 16px;  /* Aumenta el tamaño de los enlaces en el footer */
+    }
+
+    .geolocalizacion iframe {
+        height: 250px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}
