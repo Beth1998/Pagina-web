@@ -17,7 +17,6 @@
 
 .header {
     background-color: #000000b7;
-    color: white;
     padding: 10px 0;
 }
 
@@ -25,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 25px; 
 }
 
 .logo {
@@ -40,20 +39,35 @@
 
 .navegacion {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
+    margin-top: 20px;
 }
 
 .navegacion li a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     transition: color 0.3s ease;
+    transition: background-color 0.5s;
+    transition: padding 0.5s;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+    svg{height: 4vh; width: auto;
+    padding-bottom: 7px;}
 }
 
 .navegacion li a:hover {
-    color:aqua;
+    color:rgb(255, 255, 255);
 }
+
+.navegacion a:hover{
+    padding: 10px 5px 10px 5px;
+    background-color: rgb(3, 194, 194);
+}
+
 
 .main {
     padding: 20px;
@@ -105,6 +119,7 @@
     font-size: 20px;
     max-width: 400px;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .servicios {
@@ -116,27 +131,27 @@
 }
 
 .servicios .container {
-    display: flex;          /* Activa el modelo flexbox */
-    flex-direction: column; /* Asegura que los elementos hijos se apilen en columna */
-    align-items: center;    /* Centra los elementos horizontalmente */
-    justify-content: center;/* Centra los elementos verticalmente */
-    gap: 20px;              /* Espacio entre los elementos hijos */
-    text-align: center;     /* Alinea el texto de los elementos */
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    gap: 20px;              
+    text-align: center;   
 }
 
 .servicios h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     margin-bottom: 20px;
     color: aqua;
 }
 
 .servicios .contenedor-tarjetas {
-    display: flex;          /* Activa el modelo flexbox */
-    align-items: center;    /* Alinea las tarjetas en el eje vertical */
-    justify-content: center;/* Centra las tarjetas horizontalmente */
-    flex-wrap: wrap;        /* Permite que las tarjetas se ajusten si no caben en una fila */
-    gap: 50px;              /* Espaciado entre tarjetas */
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    flex-wrap: wrap;        
+    gap: 50px;             
 }
 
 
@@ -162,46 +177,28 @@
 
 .servicios .tarjeta .contenido {
     padding: 15px;
-    text-align: center;
 }
 
 .servicios .tarjeta .titulo {
-    font-size: 20px;
+    font-size: 27px;
     color: aqua;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .servicios .tarjeta .descripcion {
-    font-size: 16px;
+    font-size: 20px;
     color: white;
+    text-align:justify;
 }
-
-/*.servicios{
-    background-color: #000000b7;
-    color: white;
-    border-radius: 20px;
-    padding: 20px;
-}
-.servicios h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: aqua;
-}
-
-.servicios p {
-    text-align: center;
-    font-size: 16px;
-    width: 80%;
-    margin: 0 auto;
-}*/
 
 .footer {
     display: flex;
     justify-content:center;
     background-color: #000000;
     color: white;
-    padding: 20px;
+    padding: 25px 5px 20px 5px;
+    gap: 50px;
 }
 
 footer article {
@@ -209,6 +206,7 @@ footer article {
 }
 
 footer h3 {
+    gap: 50px;
     font-size: 25px;
     margin-bottom: 10px;
     color: aqua;
@@ -219,19 +217,52 @@ footer ul {
     list-style: none;
 }
 
-footer li a {
+footer li{
     color: white;
-    text-decoration: none;
     font-size: 25px;
     display: block;
     margin-bottom: 5px;
-    transition: color 0.3s ease;
     text-align: center;
 }
 
-footer li a:hover {
-    color: aqua;
+footer li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    text-align: center;
+    transition: background-color 0.5s;
+    transition: padding 0.5s;
+    border-radius: 100px;
+    gap: 0 10px;
+
+    svg{height: 6vh; width: auto;
+    padding-bottom: 4px;}
 }
+
+
+.footer .contacto li{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0 10px;
+    svg{height: 5vh; width: auto;
+        padding-bottom: 4px;}
+}
+
+.footer li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.footer a:hover{
+    padding: 10px 1px 10px 1px;
+    background-color: rgb(3, 194, 194);
+}
+
 
 .geolocalizacion iframe {
     width: 100%;
@@ -254,14 +285,6 @@ footer li a:hover {
     width: 100%;
     height: 100%;
 }
-
-
-@media (max-width: 768px) {
-    .geolocalizacion iframe {
-        height: 250px; /* Ajustar la altura en pantallas pequeñas */
-    }
-}
-
 
 @media (max-width: 768px) {
     .nav {
@@ -295,6 +318,7 @@ footer li a:hover {
         width: 80%;  /* Aumenta el tamaño de los elementos de Misión y Visión en pantallas pequeñas */
         margin-bottom: 20px;
     }
+    
 
     .footer {
         flex-direction: column;  /* Pone los elementos del footer en una columna */
@@ -306,11 +330,26 @@ footer li a:hover {
         margin-bottom: 20px;
     }
 
+    footer li{
+        font-size: 20px;
+    }
+
     footer li a {
-        font-size: 16px;  /* Aumenta el tamaño de los enlaces en el footer */
+        font-size: 25px;  /* Aumenta el tamaño de los enlaces en el footer */
+    }
+
+    .footer .contacto li{
+            svg{height: vh; width: auto;
+                padding-bottom: 3px;}
     }
 
     .geolocalizacion iframe {
         height: 250px; /* Ajustar la altura en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 1000px) {
+    .servicios .tarjeta {
+        width: 100%; /* En pantallas muy pequeñas, cada tarjeta ocupará toda la fila */
     }
 }
